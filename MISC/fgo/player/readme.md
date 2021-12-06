@@ -1,0 +1,1 @@
+请将result文件夹中的所有图片拼接成一张图,并从中读出flag,flag的格式为flag{xxx}

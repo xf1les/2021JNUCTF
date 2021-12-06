@@ -1,0 +1,10 @@
+version: '3.3'
+
+services:
+    pwn_gift:
+        build: ./
+        image: pwn_gift
+        container_name: pwn_gift
+        ports:
+            - "8888:8888"
+        restart: unless-stopped

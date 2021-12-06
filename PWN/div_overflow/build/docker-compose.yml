@@ -1,0 +1,10 @@
+version: '3.3'
+
+services:
+    pwn_div_overflow:
+        build: ./
+        image: pwn_div_overflow
+        container_name: pwn_div_overflow
+        ports:
+            - "8888:8888"
+        restart: unless-stopped

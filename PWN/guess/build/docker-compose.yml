@@ -1,0 +1,10 @@
+version: '3.3'
+
+services:
+    pwn_guess:
+        build: ./
+        image: pwn_guess
+        container_name: pwn_guess
+        ports:
+            - "8888:8888"
+        restart: unless-stopped

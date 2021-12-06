@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+    pwn_xxxx:
+        build: ./
+        image: re_brokenwindows
+        container_name: re_brokenwindows
+        ports:
+            - "8888:8888"
+        restart: unless-stopped

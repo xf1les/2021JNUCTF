@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: baby-sql-mysql
+    ports:
+      - "4000:3306"
+    volumes:
+      - ./env/mysql/:/docker-entrypoint-initdb.d/
+    environment:
+      MYSQL_ROOT_PASSWORD: 9b6a9f688d590c80bd1ae7d5239dcbcf
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci  
+  php:
+    build: ./env
+    container_name: baby-sql-php
+    ports:
+      - "18000:80"
+    volumes:
+      - ./www:/var/www/html

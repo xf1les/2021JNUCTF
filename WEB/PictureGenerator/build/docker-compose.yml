@@ -1,0 +1,9 @@
+version: "2"
+services:
+  web1:
+    build: .
+    image: PictureGenerator
+    ports:
+      - "8080:80"
+    environment:
+      - FLAG=flag{fhfgufghui_ewftftdf_whfdweyidg_gafdhjasdh_eghfhef_rhgfjrikfu!!!!}

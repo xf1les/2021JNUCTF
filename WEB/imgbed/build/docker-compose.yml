@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: imgbed-mysql
+    ports:
+      - "4002:3306"
+    volumes:
+      - ./env/mysql/:/docker-entrypoint-initdb.d/
+    environment:
+      MYSQL_ROOT_PASSWORD: b9be11166d72e9e3ae7fd407165e4bd2
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci  
+  php:
+    build: ./env/php
+    container_name: imgbed-php
+    ports:
+      - "18008:80"
+    volumes:
+      - ./env/php/php.ini:/usr/local/etc/php/php.ini

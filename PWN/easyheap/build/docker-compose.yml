@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+    pwn_easyheap:
+        build: ./
+        image: pwn_easyheap
+        container_name: pwn_easyheap
+        ports:
+            - "8888:8888"
+        restart: unless-stopped

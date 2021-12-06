@@ -1,0 +1,9 @@
+version: "2"
+services:
+  web:
+    build: .
+    image: ctfhub/base_web_httpd_php_74
+    ports:
+      - "8085:80"
+    environment:
+      - FLAG=flag{a3b5c6d-563ae31f-b6672e33ed-ff63a5b8}

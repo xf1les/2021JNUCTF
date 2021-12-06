@@ -1,0 +1,12 @@
+version: "2"
+services:
+  challenge:
+    build: .
+    image: ez_Py
+    ports:
+      - "10800:8080"
+    environment:
+      - FLAG=flag{Pyth0n_1s_1mp0rtant!!!!!}
+      - MODULE_NAME=app
+      - VARIABLE_NAME=app
+      - WORK_CLASS=gevent

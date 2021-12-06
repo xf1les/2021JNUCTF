@@ -1,0 +1,8 @@
+.top {
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    left: 0%;
+    pointer-events: none;
+    z-index: 99;
+}

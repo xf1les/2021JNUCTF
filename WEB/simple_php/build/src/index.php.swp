@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page had lost !</title>
+</head>
+
+<body>
+    <p>很烦恼，昨天晚上代码写着写着就跳闸了！！！</p>
+</body>
+
+</html>
+
+
+
+<?php
+function getflag(){
+    echo file_get_contents("./flag");
+}
+if(isset($_GET['code'])){
+    $code=$_GET['code'];
+    if(strlen($code)>14){
+        die("too long !");
+    }
+    if(preg_match('/[a-zA-Z0-9_&^<>"\'$#@!*&+=.`\[\]{}?,]+/',$code)){
+        die(" No ! No !");
+    }
+    @eval($code);
+}

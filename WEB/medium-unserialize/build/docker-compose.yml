@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+ php:
+   build: ./env
+   container_name: medium-unserialize
+   ports:
+    - "10808:80"
+   volumes:
+    - ./www/:/var/www/html/

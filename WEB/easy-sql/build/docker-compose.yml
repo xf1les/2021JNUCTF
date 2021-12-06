@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: easy-sql-mysql
+    ports:
+      - "4001:3306"
+    volumes:
+      - ./env/mysql/:/docker-entrypoint-initdb.d/
+    environment:
+      MYSQL_ROOT_PASSWORD: e19cea74b8c1cd93d49615980322a323
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci  
+  php:
+    build: ./env
+    container_name: easy-sql-php
+    ports:
+      - "18004:80"
+    volumes:
+      - ./www:/var/www/html

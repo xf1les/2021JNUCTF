@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+    pwn_basicmath:
+        build: ./
+        image: pwn_basicmath
+        container_name: pwn_basicmath
+        ports:
+            - "8888:8888"
+        restart: unless-stopped

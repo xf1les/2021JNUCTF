@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  php:
+    build: ./env
+    container_name: baby-upload
+    ports:
+      - "18002:80"

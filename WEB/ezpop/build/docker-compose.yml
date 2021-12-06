@@ -1,0 +1,10 @@
+version: "3"
+services:
+  web:
+     build: .
+     restart: always
+     ports:
+       - "30661:80"
+     environment:
+       - FLAG=flag{Y0u_Ar3_A_POP_Ma5ter!!!!}
+       
